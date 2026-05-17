@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Great Game | Map</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top-bar">
+    <h1>The Great Game</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+    </nav>
+  </header>
+
+  <main class="map-page">
+    <aside class="side-panel">
+      <h2>World Map</h2>
+      <p>Select a region to inspect ownership, resources, armies, and supply status.</p>
+
+      <div class="info-box">
+        <h3>Selected Region</h3>
+        <p id="region-name">None selected</p>
+        <p id="region-owner">Owner: —</p>
+        <p id="region-resources">Resources: —</p>
+        <p id="region-army">Army: —</p>
+      </div>
+
+      <button id="end-turn-btn">End Turn</button>
+    </aside>
+
+    <section class="map-container">
+      <svg id="game-map" viewBox="0 0 1000 600" role="img" aria-label="Strategic map">
+        <!-- Supply lines -->
+        <line x1="180" y1="220" x2="380" y2="180" class="supply-line" />
+        <line x1="380" y1="180" x2="560" y2="280" class="supply-line" />
+        <line x1="560" y1="280" x2="760" y2="210" class="supply-line" />
+        <line x1="380" y1="180" x2="420" y2="420" class="supply-line" />
+        <line x1="420" y1="420" x2="680" y2="440" class="supply-line" />
+
+        <!-- Regions -->
+        <circle cx="180" cy="220" r="45" class="region uk" data-name="Albion" data-owner="Blue Dominion" />
+        <circle cx="380" cy="180" r="50" class="region france" data-name="Westreach" data-owner="Blue Dominion" />
+        <circle cx="560" cy="280" r="55" class="region germany" data-name="Ironvale" data-owner="Central Pact" />
+        <circle cx="760" cy="210" r="50" class="region russia" data-name="Eastmarch" data-owner="Red Union" />
+        <circle cx="420" cy="420" r="48" class="region spain" data-name="Southport" data-owner="Neutral League" />
+        <circle cx="680" cy="440" r="52" class="region balkans" data-name="Stormlands" data-owner="Central Pact" />
+
+        <!-- Labels -->
+        <text x="180" y="225" class="map-label">Albion</text>
+        <text x="380" y="185" class="map-label">Westreach</text>
+        <text x="560" y="285" class="map-label">Ironvale</text>
+        <text x="760" y="215" class="map-label">Eastmarch</text>
+        <text x="420" y="425" class="map-label">Southport</text>
+        <text x="680" y="445" class="map-label">Stormlands</text>
+      </svg>
+    </section>
+  </main>
+
+  <script src="map.js"></script>
+</body>
+</html>
